@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Festive&family=Tangerine:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Festive&family=Lilita+One&family=Tangerine:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Margarine&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+.background-container,
+.container,
+.yesBtn,
+.noBtn,
+.monitorView {
+    display: flex;
+}
+
+.background-container {
+    background-image: url('../../static/svg/background.svg');
+    background-size: cover;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.monitorView {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.happyGif {
+    border-radius: 24px;
+    width: 53vw;
+    padding-bottom: 1rem;
+}
+
+.bearGif {
+    border-radius: 50px;
+}
+
+.container {
+    display: none;
+}
+
+.monitorViewTxt {
+    font-family: 'Margarine', Courier, monospace;
+    font-size: 2rem;
+}
+
+
+/* For Mobile view */
+@media (max-width: 560px) {
+    body {
+        background-color: #D98B8B;
+    }
+
+    .monitorView {
+        display: none;
+    }
+
+    .background-container,
+    .container,
+    .yesBtn,
+    .noBtn,
+    .contain-Message,
+    .theQuestion,
+    .clickedYesContainer {
+        display: flex;
+    }
+
+    .theQuestion,
+    .clickedYesContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .background-container {
+        background-image: url('../../static/svg/background.svg');
+        background-size: cover;
+        background-position: 50%;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #pageBearGif {
+        border-radius: 24px;
+        width: 53vw;
+        padding-bottom: 1rem;
+        animation-name: pageBearGifShow;
+        animation-duration: 3s;
+    }
+
+    @keyframes pageBearGifShow {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    #content-message {
+        font-family: 'Margarine', Courier, monospace;
+        font-size: 1.25rem;
+        width: 70vw;
+        text-align: center;
+        margin-top: 1.7rem;
+        margin-bottom: 6.063rem;
+        animation-name: pageBearGifShow;
+        animation-duration: 3s;
+    }
+
+    .contain-Message {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mocha-bear {
+        border-radius: 19px 19px 0px 0px;
+        width: 53vw;
+        padding-bottom: 1rem;
+    }
+
+    .special-W {
+        font-family: 'Tangerine', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 3rem;
+    }
+
+    .ask {
+        font-family: 'Festive', 'Arial Narrow', Arial, sans-serif;
+        font-size: 2rem;
+        animation-name: showAsk;
+        animation-duration: 3.5s;
+    }
+
+    .yesBtn,
+    .noBtn {
+        font-family: 'Lilita One', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 1.5rem;
+        min-width: 11.813rem;
+        min-height: fit-content;
+        width: 45vw;
+        height: 4vh;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0.375rem;
+        margin-bottom: 0.5rem;
+        text-align: center;
+    }
+
+    .yesBtn {
+        background-color: #F2CAB3;
+        animation-name: showYesBtn;
+        animation-duration: 6.5s;
+    }
+
+    .saidYes {
+        font-family: 'Lilita One', Courier, monospace;
+        font-size: 2.5rem;
+    }
+
+    .noBtn {
+        background-color: #EBAB86;
+        animation-name: showNoBtn;
+        animation-duration: 6.5s;
+    }
+
+
+    /* Animation Section */
+    @keyframes showAsk {
+        from {
+            color: transparent;
+        }
+
+        to {
+            color: black
+        }
+    }
+
+    @keyframes showYesBtn {
+        from {
+            color: transparent;
+            background-color: transparent;
+        }
+
+        to {
+            color: black;
+            background-color: #F2CAB3;
+        }
+    }
+
+    @keyframes showNoBtn {
+        from {
+            color: transparent;
+            background-color: transparent;
+        }
+
+        to {
+            color: black;
+            background-color: #EBAB86;
+        }
+    }
+}
